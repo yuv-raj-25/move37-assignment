@@ -45,11 +45,6 @@ move-37-assignment/
 ├─ package.json
 └─ README.md
 
-yaml
-Copy code
-
----
-
 ## Setup Instructions
 
 ### 1. Clone the repository
@@ -57,30 +52,37 @@ Copy code
 ```bash
 git clone <your-github-repo-link>
 cd move-37-assignment
+
+
 2. Install dependencies
+
+
 bash
-Copy code
 npm install
+
+
 3. Set up PostgreSQL
 Create a database, e.g., poll-voting-assignment
 
 Update .env file:
 
 env
-Copy code
 DATABASE_URL="postgresql://<username>:<password>@localhost:5432/poll-voting-assignment?schema=public"
 PORT=3000
+
+
 4. Run Prisma Migrations
 bash
-Copy code
 npx prisma migrate dev --name init
+
+
 5. Generate Prisma Client
 bash
-Copy code
 npx prisma generate
+
+
 6. Start the server
 bash
-Copy code
 npm run dev
 Server runs on: http://localhost:3000
 
@@ -89,7 +91,6 @@ Users
 POST /api/users – Create user
 
 json
-Copy code
 {
   "name": "Alice",
   "email": "alice@example.com",
@@ -101,7 +102,6 @@ Polls
 POST /api/polls – Create poll
 
 json
-Copy code
 {
   "creatorId": 1,
   "question": "What is your favorite programming language?",
@@ -115,7 +115,6 @@ Votes
 POST /api/votes – Cast a vote
 
 json
-Copy code
 {
   "userId": 1,
   "optionId": 2
@@ -135,7 +134,6 @@ Use npm run dev with nodemon for hot reloads.
 Test endpoints using Postman or similar tools.
 
 yaml
-Copy code
 
 ---
 
